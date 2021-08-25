@@ -1,0 +1,161 @@
+{
+	"info": {
+		"_postman_id": "c935a44f-0f06-49cd-9d60-29887f307d5c",
+		"name": "event_loop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "intensiveTask",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/intensiveTask",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"intensiveTask"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "intensiveTaskAsync",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/intensiveTaskAsync",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"intensiveTaskAsync"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "workerThread",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/workerThread",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"workerThread"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "forkProcess",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/forkProcess",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"forkProcess"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "hash",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/hash",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"hash"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "hashPromise",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/hashPromise",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"hashPromise"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "hashPromiseStackAsync",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/hashPromiseStackAsync",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"hashPromiseStackAsync"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fast",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/fast",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"fast"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
