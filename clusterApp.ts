@@ -13,6 +13,7 @@ import {
 
 if (cluster.isMaster) {
   cluster.fork();
+  cluster.fork();
 } else {
   const app = express();
 
@@ -23,15 +24,12 @@ if (cluster.isMaster) {
     res.status(200).json({ status: 'ok' });
   });
 
-  app.get(
-    '/intensiveTaskAsync',
-    (req: express.Request, res: express.Response) => {
-      const start = Date.now();
-      doWorkPromise(10000, start);
-      doWorkPromise(10000, start);
-      res.status(200).json({ status: 'ok' });
-    }
-  );
+  app.get('/intensiveTaskAsync', (req: express.Request, res: express.Response) => {
+    const start = Date.now();
+    doWorkPromise(10000, start);
+    doWorkPromise(10000, start);
+    res.status(200).json({ status: 'ok' });
+  });
 
   app.get('/workerThread', (req: express.Request, res: express.Response) => {
     const start = Date.now();
@@ -55,46 +53,43 @@ if (cluster.isMaster) {
     });
   });
 
-  app.get(
-    '/multipleFetch',
-    async (req: express.Request, res: express.Response) => {
-      try {
-        const start = Date.now();
-        console.log(1);
-        const a = await fetchGoogle(start);
-        console.log(a);
-        console.log(2);
+  app.get('/multipleFetch', async (req: express.Request, res: express.Response) => {
+    try {
+      const start = Date.now();
+      console.log(1);
+      const a = await fetchGoogle(start);
+      console.log(a);
+      console.log(2);
 
-        const b = await fetchGoogle(start);
-        console.log(b);
-        console.log(3);
+      const b = await fetchGoogle(start);
+      console.log(b);
+      console.log(3);
 
-        const c = await fetchGoogle(start);
-        console.log(c);
-        console.log(4);
+      const c = await fetchGoogle(start);
+      console.log(c);
+      console.log(4);
 
-        const d = await fetchGoogle(start);
-        console.log(d);
-        console.log(5);
+      const d = await fetchGoogle(start);
+      console.log(d);
+      console.log(5);
 
-        const e = await fetchGoogle(start);
-        console.log(e);
-        console.log(6);
+      const e = await fetchGoogle(start);
+      console.log(e);
+      console.log(6);
 
-        const f = await fetchGoogle(start);
-        console.log(f);
-        console.log(7);
+      const f = await fetchGoogle(start);
+      console.log(f);
+      console.log(7);
 
-        const g = await fetchGoogle(start);
-        console.log(g);
-        console.log(8);
+      const g = await fetchGoogle(start);
+      console.log(g);
+      console.log(8);
 
-        res.status(200).json({ status: 'ok' });
-      } catch (error) {
-        res.status(500).json({ status: 'error' });
-      }
+      res.status(200).json({ status: 'ok' });
+    } catch (error) {
+      res.status(500).json({ status: 'error' });
     }
-  );
+  });
 
   app.get('/hash', async (req: express.Request, res: express.Response) => {
     const start = Date.now();
@@ -104,16 +99,13 @@ if (cluster.isMaster) {
     res.status(200).json({ status: 'ok' });
   });
 
-  app.get(
-    '/hashPromise',
-    async (req: express.Request, res: express.Response) => {
-      const start = Date.now();
-      await hashPromise(start);
-      await hashPromise(start);
-      await hashPromise(start);
-      res.status(200).json({ status: 'ok' });
-    }
-  );
+  app.get('/hashPromise', async (req: express.Request, res: express.Response) => {
+    const start = Date.now();
+    await hashPromise(start);
+    await hashPromise(start);
+    await hashPromise(start);
+    res.status(200).json({ status: 'ok' });
+  });
 
   app.get(
     '/hashPromiseStackAsync',
@@ -126,12 +118,9 @@ if (cluster.isMaster) {
     }
   );
 
-  app.get(
-    '/testResponsive',
-    async (req: express.Request, res: express.Response) => {
-      res.status(200).json({ status: 'ok' });
-    }
-  );
+  app.get('/testResponsive', async (req: express.Request, res: express.Response) => {
+    res.status(200).json({ status: 'ok' });
+  });
 
   app.listen(3000, () => {
     console.log('server is running');
