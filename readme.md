@@ -23,6 +23,7 @@ start a command prompt and run i
 ab -n 100 -c 50 http://localhost:3000/{your route}
 
 2.  UV_THREADPOOL_SIZE:
+
     to change the number of threads of the thread pool (used by libuv), you have to set it manually, in the script start-js-regular:run , and you have to run:
     npm run start-js
 
