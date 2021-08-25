@@ -86,7 +86,7 @@ app.get(
       console.log(g);
       console.log(8);
 
-      res.status(200);
+      res.status(200).json({ status: 'ok' });
     } catch (error) {
       res.status(500).json({ status: 'error' });
     }

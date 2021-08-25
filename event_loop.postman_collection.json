@@ -139,6 +139,25 @@
 			"response": []
 		},
 		{
+			"name": "multipleFetch",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/multipleFetch",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"multipleFetch"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "testResponsive",
 			"request": {
 				"method": "GET",

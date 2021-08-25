@@ -1,14 +1,15 @@
 - to start the server in regular mode:
   npm run start-ts-regular
+
 - to start the server in cluster mode:
   npm run start-ts-cluster-mode
+
 - to start the server with pm2:
   npm run start-pm2
 - to stop pm2
   npm run delete-pm2
 
-1.
-to test your server:
+1.  to test your server:
 
 install apache benchmarking tool (ab) on windows
 download apache binaries from an apache recommended download site (i.e. :apache lounge)
@@ -21,10 +22,8 @@ start a command prompt and run i
 
 ab -n 100 -c 50 http://localhost:3000/{your route}
 
-2.
-UV_THREADPOOL_SIZE:
-to change the number of threads of the thread pool (used by libuv), you have to set it manually, in the script start-js-regular:run , and you have to run:
-npm run start-js
+2.  UV_THREADPOOL_SIZE:
+    to change the number of threads of the thread pool (used by libuv), you have to set it manually, in the script start-js-regular:run , and you have to run:
+    npm run start-js
 
-3.
-You have also the file event_loop.postman_collection.json to upload in postman
+3.  You have also the file event_loop.postman_collection.json to upload in postman
