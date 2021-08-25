@@ -6,7 +6,7 @@
 
 - to start the server with pm2:
   npm run start-pm2
-- to stop pm2
+- to stop pm2:
   npm run delete-pm2
 
 1.  to test your server:
