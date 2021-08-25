@@ -139,19 +139,19 @@
 			"response": []
 		},
 		{
-			"name": "fast",
+			"name": "testResponsive",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/fast",
+					"raw": "http://localhost:3000/testResponsive",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
-						"fast"
+						"testResponsive"
 					]
 				}
 			},

@@ -124,9 +124,12 @@ app.get(
   }
 );
 
-app.get('/fast', async (req: express.Request, res: express.Response) => {
-  res.status(200).json({ status: 'ok' });
-});
+app.get(
+  '/testResponsive',
+  async (req: express.Request, res: express.Response) => {
+    res.status(200).json({ status: 'ok' });
+  }
+);
 
 app.listen(3000, () => {
   console.log('server is running');
