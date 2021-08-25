@@ -49,5 +49,5 @@ export const doWorkPromise = (duration: number, starter: number) => {
   });
 };
 
-export const fetchGoogle = (starter: number) =>
+export const fetchExternalApi = (starter: number) =>
   fetch('https://jsonplaceholder.typicode.com/todos/1');

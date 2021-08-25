@@ -5,7 +5,7 @@ import cluster from 'cluster';
 import {
   doWork,
   doWorkPromise,
-  fetchGoogle,
+  fetchExternalApi,
   hash,
   hashPromise,
   hashPromiseAsync,
@@ -57,31 +57,31 @@ if (cluster.isMaster) {
     try {
       const start = Date.now();
       console.log(1);
-      const a = await fetchGoogle(start);
+      const a = await fetchExternalApi(start);
       console.log(a);
       console.log(2);
 
-      const b = await fetchGoogle(start);
+      const b = await fetchExternalApi(start);
       console.log(b);
       console.log(3);
 
-      const c = await fetchGoogle(start);
+      const c = await fetchExternalApi(start);
       console.log(c);
       console.log(4);
 
-      const d = await fetchGoogle(start);
+      const d = await fetchExternalApi(start);
       console.log(d);
       console.log(5);
 
-      const e = await fetchGoogle(start);
+      const e = await fetchExternalApi(start);
       console.log(e);
       console.log(6);
 
-      const f = await fetchGoogle(start);
+      const f = await fetchExternalApi(start);
       console.log(f);
       console.log(7);
 
-      const g = await fetchGoogle(start);
+      const g = await fetchExternalApi(start);
       console.log(g);
       console.log(8);
 
